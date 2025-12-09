@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background: #0d1b2a;
+    color: white;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    background: #1b263b;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hero {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.subtitle {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.8rem;
+    font-family: "Merriweather", serif;
+}
+.hero-title {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+    transform: translateY(-180px);
+    position: relative;
+    text-shadow: 3px 3px 3px black;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+.card {
+    background: white;
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.go_up {
+    object-position: 100% 20%;
+}
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1b263b;
+    text-decoration: none;
+}
+footer {
+    background: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
