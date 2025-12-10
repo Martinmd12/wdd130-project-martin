@@ -23,6 +23,16 @@ const shintoQuotes = [
   { text: "Shinto is essentially a religion of gratitude and love.", author: "W.G. Aston" }
 ];
 
+// Confucianism Quotes - Display random quote on page load
+const confucianismQuotes = [
+  { text: "One can still find happiness if one has only simple food to eat, water to drink, and a bent arm for a pillow. Wealth and high rank attained unrighteously are to me but floating clouds.", author: "Confucius, Analects 7.16" },
+  { text: "In terms of human nature, people are much alike. But in terms of practice and effort, they are quite different.", author: "Confucius, Analects 17.2" },
+  { text: "Honorable people are modest in what they say but surpassing in what they do.", author: "Confucius, Analects 14.29" },
+  { text: "Persons possessed of humanity [ren] are like this: wanting to develop themselves, they also develop others; wanting to achieve things themselves, they also allow others to achieve what they want.", author: "Confucius, Analects 6.30" },
+  { text: "When [Confucius] sacrificed to the ancestral spirits, he did so as if they were actually present... The master said, 'If I do not really take part in the sacrifice, it is as if I did not sacrifice at all.'", author: "Confucius, Analects 3.12" },
+  { text: "A great man is hard on himself; a small man is hard on others.", author: "Paraphrasing Confucius, Analects 15.20" }
+];
+
 // Display a random quote on page load
 function displayRandomQuote() {
   const quoteElement = document.getElementById('randomQuote');
@@ -31,6 +41,11 @@ function displayRandomQuote() {
     if (window.location.pathname.includes('shintoism.html')) {
       const randomIndex = Math.floor(Math.random() * shintoQuotes.length);
       const quote = shintoQuotes[randomIndex];
+      quoteElement.textContent = `"${quote.text}" — ${quote.author}`;
+    } else if (window.location.pathname.includes('confucianism.html')) {
+      // Confucianism quotes
+      const randomIndex = Math.floor(Math.random() * confucianismQuotes.length);
+      const quote = confucianismQuotes[randomIndex];
       quoteElement.textContent = `"${quote.text}" — ${quote.author}`;
     } else {
       // Buddhist quotes
