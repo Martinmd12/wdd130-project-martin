@@ -17,6 +17,10 @@ nav {
     gap: 30px;
     padding: 15px 0;
     background: #1b263b;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 nav a {
     color: white;
@@ -71,7 +75,9 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
-    transition: transform .5s;
+    transition: transform .5s, opacity 0.6s ease-out, translate 0.6s ease-out;
+    opacity: 0;
+    translate: 0 50px;
 }
 .card:hover {
     transform: scale(1.05);
@@ -94,6 +100,10 @@ nav a:hover {
 }
 .card a:hover{
     opacity: .8;
+}
+.card.visible {
+    opacity: 1;
+    translate: 0 0;
 }
 footer {
     background: #0d1b2a;
