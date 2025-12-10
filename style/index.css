@@ -78,6 +78,8 @@ nav a:hover {
     transition: transform .5s, opacity 0.6s ease-out, translate 0.6s ease-out;
     opacity: 0;
     translate: 0 50px;
+    color: #333;
+    text-decoration: none;
 }
 .card:hover {
     transform: scale(1.05);
