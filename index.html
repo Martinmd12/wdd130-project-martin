@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Worldviews on Screen</title>
-    <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worldviews on Screen</title>
+  <link rel="stylesheet" href="style/index.css">
 </head>
 
 <header>
@@ -22,37 +22,79 @@
 </header>
 
 <body>
-    <div class="hero_section">
-        <img src="images/films.jpg" alt="Stacked film reels" class="hero_image">
-        <h1>Worldviews on Screen: Understanding Religion Through Film</h1>
-        <p>Films are powerful windows into the beliefs, values, and spiritual questions that shape different cultures. This website explores how major world religions express their worldviews through cinema—how stories reveal what people believe about suffering, morality, happiness, and the divine.</p>
-        <p>Each section highlights a specific religion, along with a film that embodies its worldview. These films are not chosen to convert or persuade, but to help viewers appreciate how cultures express meaning through storytelling.</p>
-    </div>
 
-    <h2>Featured Worldviews</h2>
-    <div class="worldview_section">
-        <div class="worldview">
-            <h3>Buddhism</h3>
-            <p>Films about impermanence, suffering, and liberation.</p>
-        </div>
-        <div class="worldview">
-            <h3>Christianity</h3>
-            <p>Films about sacrifice, transformation, and hope.</p>
-        </div>
-        <div class="worldview">
-            <h3>Hinduism</h3>
-            <p>Films about dharma, duty, and the cycle of life.</p>
-        </div>
-        <div class="worldview">
-            <h3>Islam</h3>
-            <p>Films about justice, devotion, and community.</p>
-        </div>
-    </div>
+<header>
+  <img src="images/icon.png" alt="Worldviews on Screen Logo" style="height:80px;" />
+</header>
 
-    <div class="symbols_section">
-        <h2>Sacred Symbols</h2>
-        <img src="images/collage.png" alt="Collage of sacred symbols (Om, Cross, Dharma Wheel, Crescent)" class="symbols_image">
-    </div>
+<nav>
+  <a href="#">Home</a>
+  <a href="buddhism.html">Buddhism</a>
+  <a href="christianity.html">Christianity</a>
+  <a href="shintoism.html">Shintoism</a>
+  <a href="confucianism.html">Confucianism</a>
+  <a href="#">Contact</a>
+</nav>
+
+<img src="images/hero-img.jpg" alt="woman praying" class="hero">
+
+<h2 class="hero-title">Explore How Film Reveals the World's Religions</h2>
+
+<h2 class="subtitle">Featured Worldviews</h2>
+<div class="cards">
+  <a href="buddhism.html" class="card">
+    <img src="images/buddhist_cin.jpg" alt="Buddhism"/>
+    <h3>Buddhism</h3>
+    <p>A brief intro about Buddhism and its appearance in film.</p>
+    <span>Learn More →</span>
+  </a>
+  <a href="christianity.html" class="card">
+    <img src="images/christianity.jpg" alt="Christianity" class="go_up"/>
+    <h3>Christianity</h3>
+    <p>A brief intro about Christianity shown through movies.</p>
+    <span>Learn More →</span>
+  </a>
+  <a href="shintoism.html" class="card">
+    <img src="images/shrine.jpg" alt="Shintoism"/>
+    <h3>Shintoism</h3>
+    <p>Explore Shinto themes of nature, spirits, and sacred harmony in cinema.</p>
+    <span>Learn More →</span>
+  </a>
+  <a href="confucianism.html" class="card">
+    <img src="images/Confucious_card.jpg" alt="Confucianism"/>
+    <h3>Confucianism</h3>
+    <p>Discover Confucian values of family, duty, and moral harmony in film.</p>
+    <span>Learn More →</span>
+  </a>
+</div>
+
+<footer>
+  © 2025 Worldviews on Screen
+</footer>
+
+<script>
+  // Scroll-reveal animation for cards
+  const cards = document.querySelectorAll('.card');
+  
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+  
+  cards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.15}s`;
+    observer.observe(card);
+  });
+</script>
+
 </body>
 
 <footer>
