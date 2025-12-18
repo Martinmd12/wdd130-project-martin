@@ -33,6 +33,12 @@ const confucianismQuotes = [
   { text: "A great man is hard on himself; a small man is hard on others.", author: "Paraphrasing Confucius, Analects 15.20" }
 ];
 
+// Daoism Quotes - Display random quote on page load
+const daoismQuotes = [
+  { text: "It is not because I grasp the instructions of our teacher better, but because for a long time you closed your mind to learning new things. You thought you had learned all there was to learn. Your intelligence became an obstacle to your training. Learning is limitless. Not many can fully grasp this idea.", author: "Paraphrasing Ma Tanyang" },
+  { text: "You must let go of the illusion of control", author: "Master Oogway" }
+];
+
 // Display a random quote on page load
 function displayRandomQuote() {
   const quoteElement = document.getElementById('randomQuote');
@@ -46,6 +52,11 @@ function displayRandomQuote() {
       // Confucianism quotes
       const randomIndex = Math.floor(Math.random() * confucianismQuotes.length);
       const quote = confucianismQuotes[randomIndex];
+      quoteElement.textContent = `"${quote.text}" — ${quote.author}`;
+    } else if (window.location.pathname.includes('daoism.html')) {
+      // Daoism quotes
+      const randomIndex = Math.floor(Math.random() * daoismQuotes.length);
+      const quote = daoismQuotes[randomIndex];
       quoteElement.textContent = `"${quote.text}" — ${quote.author}`;
     } else {
       // Buddhist quotes
