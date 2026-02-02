@@ -49,6 +49,16 @@ const christianityQuotes = [
   { text: "I can do all things through Christ who strengthens me.", author: "Philippians 4:13" }
 ];
 
+// Islam Quotes - Display random quote on page load
+const islamQuotes = [
+  { text: "The best among you are those who have the best manners and character.", author: "Prophet Muhammad (Sahih al-Bukhari)" },
+  { text: "Whoever is kind to the creatures of God is kind to himself.", author: "Prophet Muhammad" },
+  { text: "The strong person is not the one who can wrestle someone else down. The strong person is the one who can control himself when he is angry.", author: "Prophet Muhammad (Sahih al-Bukhari)" },
+  { text: "None of you truly believes until he loves for his brother what he loves for himself.", author: "Prophet Muhammad (Sahih al-Bukhari)" },
+  { text: "Speak good or remain silent.", author: "Prophet Muhammad (Sahih al-Bukhari)" },
+  { text: "The merciful are shown mercy by the All-Merciful. Show mercy to those on earth, and the One above the heavens will show mercy to you.", author: "Prophet Muhammad (Sunan al-Tirmidhi)" }
+];
+
 // Display a random quote on page load
 function displayRandomQuote() {
   const quoteElement = document.getElementById('randomQuote');
@@ -72,6 +82,11 @@ function displayRandomQuote() {
       // Christianity quotes
       const randomIndex = Math.floor(Math.random() * christianityQuotes.length);
       const quote = christianityQuotes[randomIndex];
+      quoteElement.textContent = `"${quote.text}" — ${quote.author}`;
+    } else if (window.location.pathname.includes('islam.html')) {
+      // Islam quotes
+      const randomIndex = Math.floor(Math.random() * islamQuotes.length);
+      const quote = islamQuotes[randomIndex];
       quoteElement.textContent = `"${quote.text}" — ${quote.author}`;
     } else {
       // Buddhist quotes
