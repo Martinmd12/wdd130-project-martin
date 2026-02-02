@@ -1,131 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Worldviews on Screen</title>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-      background: #0d1b2a;
-      color: white;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px 0;
-      background: #1b263b;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      width: 100%;
-      height: 300px;
-      background: url('images/christ_rich_young_ruler_hofmann.jpeg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .section-title {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 1.8rem;
-    }
-    .cards {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin: 40px 0;
-      flex-wrap: wrap;
-    }
-    .card {
-      background: white;
-      width: 260px;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 10px;
-      font-weight: bold;
-      color: #1b263b;
-      text-decoration: none;
-    }
-    footer {
-      background: #0d1b2a;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christianity</title>
+    <link rel="stylesheet" href="style/christianity.css">
 </head>
-<body>
 
 <header>
-  <a href="index.html" class="logo_link">
-    <img src="images/icon.png" alt="Worldviews on Screen" class="logo">
-  </a>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="buddhism.html">Buddhism</a></li>
-      <li><a href="christianity.html">Christianity</a></li>
-      <li><a href="shintoism.html">Shintoism</a></li>
-      <li><a href="confucianism.html">Confucianism</a></li>
-      <li><a href="daoism.html">Daoism</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <a href="index.html" class="logo_link">
+        <img src="images/icon.png" alt="Worldviews on Screen" class="logo">
+    </a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buddhism.html">Buddhism</a></li>
+            <li><a href="christianity.html">Christianity</a></li>
+            <li><a href="shintoism.html">Shintoism</a></li>
+            <li><a href="confucianism.html">Confucianism</a></li>
+            <li><a href="daoism.html">Daoism</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
-<div class="hero">Large Cinematic Image Placeholder</div>
+<body>
+    <!-- HERO SECTION -->
+    <div class="hero_quote">
+        <img src="images/christ_rich_young_ruler_hofmann.jpeg" alt="Christian art backdrop">
+        <h2>Christian Themes in Cinema</h2>
+    </div>
 
-<h2 class="section-title">Explore How Film Reveals the World's Religions</h2>
+    <!-- INTRO SECTION -->
+    <div class="middlep">
+        <h3>Christianity</h3>
+        <p>
+            Christian-influenced films often explore themes of redemption, sacrifice, forgiveness, and the struggle between good and evil.
+            Rather than focusing solely on biblical narratives, many filmmakers draw on Christian imagery, moral frameworks, and the tension between 
+            human weakness and divine grace. The examples here show one way Christian ideas and symbols appear in cinema, 
+            not the full breadth of the tradition.
+        </p>
+    </div>
 
-<h2 class="section-title">Featured Worldviews</h2>
-<div class="cards">
-  <div class="card">
-    <img src="buddhism.jpg" alt="Buddhism" />
-    <h3>Buddhism</h3>
-    <p>A brief intro about Buddhism and its appearance in film.</p>
-    <a href="#">Learn More →</a>
-  </div>
-  <div class="card">
-    <img src="christianity.jpg" alt="Christianity" />
-    <h3>Christianity</h3>
-    <p>A brief intro about Christianity shown through movies.</p>
-    <a href="#">Learn More →</a>
-  </div>
-</div>
+    <!-- QUOTE SECTION -->
+    <div class="quote" id="randomQuote">
+        "For God so loved the world that he gave his one and only Son." — John 3:16
+    </div>
+
+    <!-- FEATURED FILM -->
+    <h2>Featured Film</h2>
+    <div class="film_section">
+        <div class="film_card">
+            <img src="images/religions/christianity/silence_poster.jpg" alt="Silence film poster">
+            <h3>Silence</h3>
+            <p>
+                Martin Scorsese's <em>Silence</em> follows two Jesuit priests who travel to 17th-century Japan 
+                to find their mentor and spread Christianity amid brutal persecution. The film grapples with 
+                questions of faith, doubt, martyrdom, and the silence of God in the face of suffering—offering 
+                a profound meditation on what it means to hold onto belief when tested to the breaking point.
+            </p>
+        </div>
+    </div>
+</body>
 
 <footer>
-  © 2025 Worldviews on Screen
+    <span>@2025 worldviews on screen</span>
 </footer>
 
-</body>
+<script src="script.js"></script>
 </html>

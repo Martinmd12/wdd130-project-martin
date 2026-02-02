@@ -39,6 +39,16 @@ const daoismQuotes = [
   { text: "You must let go of the illusion of control", author: "Master Oogway" }
 ];
 
+// Christianity Quotes - Display random quote on page load
+const christianityQuotes = [
+  { text: "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.", author: "John 3:16" },
+  { text: "Love your neighbor as yourself.", author: "Mark 12:31" },
+  { text: "Do to others as you would have them do to you.", author: "Luke 6:31" },
+  { text: "Faith is the substance of things hoped for, the evidence of things not seen.", author: "Hebrews 11:1" },
+  { text: "Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you.", author: "Ephesians 4:32" },
+  { text: "I can do all things through Christ who strengthens me.", author: "Philippians 4:13" }
+];
+
 // Display a random quote on page load
 function displayRandomQuote() {
   const quoteElement = document.getElementById('randomQuote');
@@ -57,6 +67,11 @@ function displayRandomQuote() {
       // Daoism quotes
       const randomIndex = Math.floor(Math.random() * daoismQuotes.length);
       const quote = daoismQuotes[randomIndex];
+      quoteElement.textContent = `"${quote.text}" — ${quote.author}`;
+    } else if (window.location.pathname.includes('christianity.html')) {
+      // Christianity quotes
+      const randomIndex = Math.floor(Math.random() * christianityQuotes.length);
+      const quote = christianityQuotes[randomIndex];
       quoteElement.textContent = `"${quote.text}" — ${quote.author}`;
     } else {
       // Buddhist quotes
